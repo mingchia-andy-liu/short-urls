@@ -4,6 +4,7 @@ const getEnv = (name) => (process.env[name] || '')
 
 const defaultRedirectURL = getEnv('DEFAULT_REDIRECT_URL')
 const cacheBusterCode = getEnv('CACHE_BUSTER_SECRET')
+const cacheAge = getEnv('CACHE_AGE')
 
 // functions exist for a while in memory, so this can help
 // us avoid having to call airtable for the same link during that time.
@@ -32,8 +33,8 @@ exports.handler = async (event, context) => {
       headers: {
         Location: longLink,
 
-        // 'Cache-Control': 'public, max-age=60', // 10080 seconds is 1 week
-        'Cache-Control': 'no-cache',
+        'Cache-Control': `public, max-age=${cacheAge}`,
+        // 'Cache-Control': 'no-cache',
 
         // Same header as bit.ly URL
         'Content-Length': String(body.length),
@@ -57,7 +58,7 @@ exports.handler = async (event, context) => {
   }
 
   const codeLength = code.length
-  if (codeLength > 50) {
+  if (codeLength > 40) {
     log(`short code "${code}" is ${codeLength} characters long. :thinking:.`)
     return getResponse()
   }
