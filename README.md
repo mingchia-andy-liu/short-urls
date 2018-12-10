@@ -7,6 +7,7 @@ This is a short-url service that works with
 ## Example
 
 Here are a sneak peak, find out what else I have hidden yourself.
+
 | Shorten URL | Links |
 |----------------------|-------------------------------------------------------------------------------------------------------|
 | aliu.info/me | [My personal page](andyliu.me) |
@@ -19,13 +20,13 @@ Here are a sneak peak, find out what else I have hidden yourself.
 
 ### Netlify, Netlify functions
 
-The repo has an continuous deployment with `Netlify`. It also provides custom domain which I set up my cloudflare DNS record to `Netlify`'s build in DNS service.
+The repo has an continuous deployment with `Netlify`. It also provides custom domain management which I set up my `Cloudflare` DNS record to `Netlify`'s build in DNS service.
 
 Redirects is setup automatically in the `netlify.toml`. Everything should go to the function handler. The `redirect.js` handler parse the short code and read the long link from `airtable`. There is also a small in-memory cache to prevent max out the airtable rate limit.
 
 ### airetable
 
-It's a free and simple service that provides spreadsheet as a lookup table. Short code and redirect links are stored in here. **Notes:** It has a limit of 5 requests per second.
+It's a free and simple service that provides spreadsheet as a lookup table. Short codes and redirect links are stored in here. **Notes:** It has a limit of 5 requests per second.
 
 ### Cloudflare
 
