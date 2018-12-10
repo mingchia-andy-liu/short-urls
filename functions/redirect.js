@@ -4,7 +4,7 @@ const getEnv = (name) => (process.env[name] || '')
 
 const defaultRedirectURL = getEnv('DEFAULT_REDIRECT_URL')
 const cacheBusterCode = getEnv('CACHE_BUSTER_SECRET')
-const cacheAge = getEnv('CACHE_AGE')
+// const cacheAge = getEnv('CACHE_AGE')
 
 // functions exist for a while in memory, so this can help
 // us avoid having to call airtable for the same link during that time.
@@ -12,6 +12,7 @@ let fakeCache = {}
 const bustCache = () => (fakeCache = {})
 
 exports.handler = async (event, context) => {
+  console.log('\n')
   // a unique id per request session
   const runId = Math.random().toString().substr(2, 5)
   const log = (...args) => console.log(runId, ...args)
@@ -33,7 +34,7 @@ exports.handler = async (event, context) => {
       headers: {
         Location: longLink,
 
-        'Cache-Control': `public, max-age=${cacheAge}`,
+        // 'Cache-Control': `public, max-age=${cacheAge}`,
         // 'Cache-Control': 'no-cache',
 
         // Same header as bit.ly URL
@@ -48,7 +49,7 @@ exports.handler = async (event, context) => {
 
   if (!code) {
     log(`no code provided`)
-    return getResponse({code, statusCode: 301})
+    return getResponse({code})
   }
 
   if (code === cacheBusterCode) {
@@ -65,7 +66,7 @@ exports.handler = async (event, context) => {
 
   if (fakeCache[code]) {
     log(`short code "${code}" exists in our in-memory cache.`)
-    return getResponse({longLink: fakeCache[code], statusCode: 301})
+    return getResponse({longLink: fakeCache[code]})
   }
 
   try {
@@ -85,10 +86,10 @@ exports.handler = async (event, context) => {
         filterByFormula: `{${shortCodeField}} = "${code}"`,
       })
       .firstPage()
-    const longLink = result[0].get(longLinkField)
+    const longLink = result && result.length != 0 ? result[0].get(longLinkField) : null
     if (longLink) {
       fakeCache[code] = longLink
-      return getResponse({longLink, statusCode: 301})
+      return getResponse({longLink})
     } else {
       log(`There was no Long Link associated with "${code}".`)
       return getResponse()
