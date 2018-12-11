@@ -1,7 +1,0 @@
-/gl     https://google.com
-/gh     https://github.com/mingchia-andy-liu
-/tw     https://twitter.com/andyliu__
-/cp     https://codepen.io/andy_liu
-/in     https://www.linkedin.com/in/mingchia-andy-liu
-
-/:code  /.netlify/functions/redirect/:code
