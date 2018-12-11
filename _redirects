@@ -1,7 +1,10 @@
-/gl     https://google.com
-/gh     https://github.com/mingchia-andy-liu
-/tw     https://twitter.com/andyliu__
-/cp     https://codepen.io/andy_liu
-/in     https://www.linkedin.com/in/mingchia-andy-liu
+/me           http://andyliu.me
+/gl           https://google.com
+/gh           https://github.com/mingchia-andy-liu
+/tw           https://twitter.com/andyliu__
+/cp           https://codepen.io/andy_liu
+/in           https://www.linkedin.com/in/mingchia-andy-liu
+/box-scores   https://chrome.google.com/webstore/detail/mfmkedeaebcckihpinmhkadoagdbifaa
+/what-is-this https://github.com/mingchia-andy-liu/short-urls#readme
 
-/:code  /.netlify/functions/redirect/:code
+/*            https://github.com/mingchia-andy-liu/short-urls
