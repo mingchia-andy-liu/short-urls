@@ -1,9 +1,7 @@
-/gl         https://google.com                             302
-/gh         https://github.com/mingchia-andy-liu           302
-/tw         https://twitter.com/andyliu__                  302
-/cp         https://codepen.io/andy_liu                    302
-/in         https://www.linkedin.com/in/mingchia-andy-liu  302
+/gl     https://google.com
+/gh     https://github.com/mingchia-andy-liu
+/tw     https://twitter.com/andyliu__
+/cp     https://codepen.io/andy_liu
+/in     https://www.linkedin.com/in/mingchia-andy-liu
 
-/robots.txt /static/robots.txt                             200
-
-/:code      /.netlify/functions/redirect/:code
+/:code  /.netlify/functions/redirect/:code
