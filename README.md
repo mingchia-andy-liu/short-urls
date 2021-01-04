@@ -8,10 +8,11 @@ Example shorten urls.
 
 | Shorten URL | Links |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| aliu.info/me | [My personal page](andyliu.me) |
+| aliu.info/me | [My personal page](aliu.dev) |
+| aliu.info/linkedin | [My LinkedIn profile](linkedin.com/in/mingchia-andy-liu) |
 | aliu.info/github | [My github profile](github.com/mingchia-andy-liu) |
-| aliu.info/box-scores | [My box scores extension](https://chrome.google.com/webstore/detail/mfmkedeaebcckihpinmhkadoagdbifaa) |
-| aliu.info/❤️ | [My favourite singer](https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu) |
+| aliu.info/nba | [My box scores extension](https://boxscores.site) |
+| aliu.info/taeyeon | [My favourite singer](https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu) |
 
 
 ## Netlify
