@@ -8,9 +8,9 @@ Example shorten urls.
 
 | Shorten URL | Links |
 |----------------------|-------------------------------------------------------------------------------------------------------|
-| aliu.info/me | [My personal page](aliu.dev) |
-| aliu.info/linkedin | [My LinkedIn profile](linkedin.com/in/mingchia-andy-liu) |
-| aliu.info/github | [My github profile](github.com/mingchia-andy-liu) |
+| aliu.info/me | [My personal page](https://aliu.dev) |
+| aliu.info/linkedin | [My LinkedIn profile](https://ca.linkedin.com/in/mingchia-andy-liu) |
+| aliu.info/github | [My github profile](https://github.com/mingchia-andy-liu) |
 | aliu.info/nba | [My box scores extension](https://boxscores.site) |
 | aliu.info/taeyeon | [My favourite singer](https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu) |
 
