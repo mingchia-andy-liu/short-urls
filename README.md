@@ -1,5 +1,7 @@
 # short urls
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4e5cc68-22ef-4de1-ab4f-09cc78bd4aed/deploy-status)](https://app.netlify.com/sites/andy-liu/deploys)
+
 This is a short-url service that works with [Netlify](https://www.netlify.com/). It uses its redirect function to make the short url magic. The original method would work with [Netlify functions](https://www.netlify.com/docs/functions/), it was based on Kent C. Dodds' [repository](https://github.com/kentcdodds/airtable-netlify-short-urls). Check out the **`functions`** branch, if you are interested.
 
 ## Example
